@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<title>RAMMKA</title>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="container">
+			<div class="header">
+				<div class="header__logo">
+					<img src="img/logo.png" alt="">
+				</div>
+				<div class="header__search-wrap search">
+					<input class="search__input" placeholder="Поиск" type="text">
+					<button class="search__btn"></button>
+				</div>
+				<div class="header__nav">
+					<a class="header__nav_angle"></a>
+					<ul class="header__nav_wrap nav">
+						<li class="nav__item"><a href="#">Каталог</a></li>
+						<li class="nav__item"><a href="#">Художники</a></li>
+						<li class="nav__item"><a href="#">О проекте</a></li>
+					</ul>
+				</div>
+				<ul class="header__menu">
+					<li><a class="menu__add"></a></li>
+					<li><a class="menu__menu"></a></li>
+					<li><a class="menu__bag"></a></li>
+					<li><a class="menu__client"><span></span></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<a href="#" class="back-to-pictures">Вернуться ко всем картинам</a>
+		<div class="main-content">
+			<div class="main-content__slider">
+					<div class="picture">
+							<div id="block-for-slider" class="picture__block">
+										<div id="viewport">
+												<ul id="slidewrapper">
+														<li class="slide"><img src="img/orig_demon.jpg" alt="1" class="slide-img"></li>
+														<li class="slide"><img src="img/devices_demon.jpg" alt="2" class="slide-img"></li>
+														<li class="slide"><img src="img/int_demon.png" alt="3" class="slide-img"></li>
+												</ul>
+												<div id="prev-next-btns">
+														<div id="prev-btn"><span></span></div>
+														<div id="next-btn"><span></span></div>
+												</div>
+
+												<ul id="nav-btns">
+														<li class="slide-nav-btn">Оригинал</li>
+														<li class="slide-nav-btn">На устройствах</li>
+														<li class="slide-nav-btn">В интерьере</li>
+												</ul>
+										</div>
+								</div>
+						</div>
+						<div class="under-slider">
+							<div class="under-slider__wrap statistic">
+									<p class="statistic__views">999 просмотров</p>
+									<div class="statistic__feedback feedback">
+										<div class="feedback__items feedback__item_likes">
+												<a href="#" class=""></a><span>1</span>
+										</div>
+										<div class="feedback__items feedback__item_dislikes">
+												<a href="#" class="feedback__dislikes"></a><span>0</span>
+										</div>
+										<div class="feedback__items feedback__item_share">
+												<a href="#" class="feedback__share"></a><span>Поделиться</span>
+										</div>
+									</div>
+							</div>
+							<p class="under-slider__date">
+								Опубликованно: 19.04.2018
+							</p>
+						</div>
+		</div>
+		<div class="main-content__picture-info">
+			<div class="sidebar">
+				<h1 class="sidebar__item-name">Демон сидящий</h1>
+				<p class="sidebar__item-author">Автор: Николай Воскресенский</p>
+					<p class="sidebar__item-params">Ширина: 30 см. х Длина: 40 см.<br>
+					Материалы: Холст, Масло.</p>
+				<div class="sidebar__buy buy">
+					<p class="buy_price">300 000 <span class="buy_price_currency">руб.<span></p>
+					<a href="#" class="buy_btn">Купить оригинал</a>
+				</div>
+				<div class="sidebar__download download">
+					<p class="download_params">Размер электронной копии:<br>
+						5458 x 3639 пикселей</p>
+					<a href="#" onclick="DownloadModal('block')" class="download_btn">Скачать копию</a>
+				</div>
+				<div class="sidebar__collection collection">
+					<p class="collection_count"><img src="img/count.png" alt="count_icon" class="collection_count_icon">Добавлена 5 раз</p>
+					<a href="#" onclick="CollectionModal('block')" class="collection_btn">Добавить в коллецию</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="container">
+			<div class="description">
+				<div class="description__owner">
+					<h3>Владелец</h3>
+					<p>Бадер ибн-Абдулла ибн Мохаммед ибн Фархан Аль-Сауд</p>
+				</div>
+				<div class="description__year">
+					<h3>Год создания</h3>
+					<p>1990</p>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="gallery">
+				<div class="gallery__title">
+					<h2>Похожие картины</h2>
+				</div>
+				<div class="gallery__sort sort">
+					<a class="sort__item all_view" onclick="showAll();">Все категории</a>
+					<a id="category-1" class="sort__item" onclick="hideCategory(1);">Импрессионизм<span class="sort__item_cross"></span></a>
+					<a id="category-2" class="sort__item" onclick="hideCategory(2);">Портрет<span class="sort__item_cross"></span></a>
+					<a id="category-3" class="sort__item" onclick="hideCategory(3);">Алла прима<span class="sort__item_cross"></span></a>
+
+				</div>
+				<div class="gallery__pictures pictures">
+					<div class="pictures__column">
+						<img id="img1" src="img/1-1.jpg" alt="">
+						<a href="#"><img  src="img/addPhoto.png" alt=""></a>
+					</div>
+					<div class="pictures__column">
+						<img id="img2" src="img/2-1.jpg" alt="">
+						<img id="img3" src="img/2-2.jpg" alt="">
+					</div>
+					<div class="pictures__column">
+						<img id="img4" src="img/3-1.jpg" alt="">
+						<img id="img5" src="img/3-2.jpg" alt="">
+					</div>
+					<div class="pictures__column">
+						<img id="img6" src="img/4-1.jpg" alt="">
+						<img id="img7" src="img/4-2.jpg" alt="">
+					</div>
+					<div class="pictures__column">
+						<img id="img8"  src="img/5-1.jpg" alt="">
+						<img id="img9" src="img/5-2.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Задний прозрачный фон-->
+		<div onclick="DownloadModal('none')" id="wrap1" class="wrap"></div>
+		<div onclick="BuyModal('none')" id="wrap2" class="wrap"></div>
+		<div onclick="CollectionModal('none')" id="wrap3" class="wrap"></div>
+		<!-- Само окно-->
+		<div id="modal-downLoad" class="modal modal-download">
+			<div class="modal-download__upper upper">
+				<a href="#" onclick="DownloadModal('none')" class="modal-download__linkBack linkBack"><img src="img/Vector3.png" class="modal-download__icon">Вернуться к картине</a>
+				<a href="#" onclick="BuyModal('block')" class="modal-download__linkBuy">Приобрести наборы картин</a>
+			</div>
+			<div class="modal-download__main">
+				<div class="modal-download__buy-block buy-block">
+					<span class="buy-block__price">170</span>
+					<p class="buy-block__currency">Рублей</p>
+					<p class="buy-block__counter">1 Картина</p>
+					<a href="#" class="buy-block__btn">Купить</a>
+				</div>
+				<div class="modal-download__dwnld-block dwnld-block">
+					<span class="dwnld-block__myPack">Мой пакет</span>
+					<p class="dwnld-block__process">Осталось скачать 8 из 10</p>
+					<a href="#" class="dwnld-block__btn">Скачать</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="modal-buy" class="modal modal-buy">
+			<div class="modal-buy__upper upper">
+				<a href="#" onclick="BuyModal('none')" class="modal-buy__linkBack linkBack"><img src="img/Vector3.png" class="modal-download__icon">Вернуться к картине</a>
+				<span class="modal-buy__reminder">Скачивая картины на нашем сайте вы поддерживаете художника!</span>
+			</div>
+			<div class="modal-buy__main">
+				<div class="modal-buy__buy-block buy-block">
+					<span class="buy-block__price">170</span>
+					<p class="buy-block__currency">Рублей</p>
+					<p class="buy-block__counter">1 Картина</p>
+					<a href="#" class="buy-block__btn">Купить</a>
+				</div>
+				<div class="modal-buy__buy-block buy-block">
+					<span class="buy-block__price">1500</span>
+					<p class="buy-block__currency">Рублей</p>
+					<p class="buy-block__counter">10 Картина</p>
+					<a href="#" class="buy-block__btn">Купить</a>
+				</div>
+				<div class="modal-buy__buy-block buy-block">
+					<span class="buy-block__price">2700</span>
+					<p class="buy-block__currency">Рублей</p>
+					<p class="buy-block__counter">20 Картина</p>
+					<a href="#" class="buy-block__btn">Купить</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="modal-collection" class="modal modal-collection">
+			<div class="modal-collection__upper upper">
+				<a href="#" onclick="CollectionModal('none')" class="modal-buy__linkBack linkBack"><img src="img/Vector3.png" class="modal-download__icon">Вернуться к картине</a>
+				<a href="#" class="modal-collection__new-folder">Cоздать новую папку</a>
+			</div>
+			<div class="modal-collection__main">
+				<div class="modal-collection__col-item col-item">
+					<div class="col-item__wrap-name">
+						<h2 class="col-item__name">Избранное</h2>
+					</div>
+					<div class="col-item__wrap-icon">
+						<img class="col-item__icon" src="img/earth.png" alt="icon">
+					</div>
+					<div class="col-item__wrap-btn">
+						<a href="#" class="col-item__btn">Сохранить</a>
+					</div>
+				</div>
+				<div class="modal-collection__col-item col-item">
+					<div class="col-item__wrap-name">
+						<h2 class="col-item__name">Моя мастерская</h2>
+					</div>
+					<div class="col-item__wrap-icon">
+						<img class="col-item__icon icon__block" src="img/block.png" alt="icon">
+					</div>
+					<div class="col-item__wrap-btn">
+						<a href="#" class="col-item__btn">Сохранить</a>
+					</div>
+				</div>
+				<div class="modal-collection__col-item col-item">
+					<div class="col-item__wrap-name">
+						<h2 class="col-item__name">Интересные</h2>
+					</div>
+					<div class="col-item__wrap-icon">
+						<img class="col-item__icon" src="img/earth.png" alt="icon">
+					</div>
+					<div class="col-item__wrap-btn">
+						<a href="#" class="col-item__btn">Сохранить</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/modals.js"></script>
+	<script src="js/gallery_sort.js"></script>
+</body>
+</html>

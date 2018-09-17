@@ -1,0 +1,284 @@
+.main-content
+	display: flex
+	&__picture-info
+.under-slider
+	display: flex
+	flex-direction: column
+	&__wrap
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: -13px
+	&__date
+		font-size: 14px
+		color: #A1A1A1
+		margin-left: 20px		
+.statistic
+	&__views
+		margin-top: 36px
+		margin-left: 20px
+		color: #828282
+		font-size: 16px
+	&__feedback
+.feedback
+	display: flex
+	align-items: center
+	width: 50%
+	&__items
+		display: flex
+		align-items: center
+		font-size: 14px
+		a
+			text-decoration: none
+			color: #828282
+			display: block
+			width: 21px
+			height: 21px
+	&__item_likes
+		margin-top: 7px
+		margin-left: 106px
+		a
+			background: url(../img/like.jpg) no-repeat center
+			margin-right: -2px
+		span
+			color: #828282
+			margin-top: 6px
+			margin-left: 5px
+		&:hover
+			a
+				background: url(../img/like_hover.png) no-repeat center
+			span
+				color: #333333
+	&__item_dislikes
+		margin-top: 15px
+		margin-left: 12px
+		a
+			background: url(../img/dislike.png) no-repeat center
+			margin-left: -2px
+		span
+			margin-top: -1px
+			
+		&:hover
+			a
+				background: url(../img/dislike_hover.jpg) no-repeat center
+			span
+				color: #333333
+	&__item_share
+		color: #4F4F4F
+		margin-left: 49px
+		margin-top: 15px
+		a
+			background: url(../img/share.png) no-repeat center
+		span
+			margin-left: 5px
+			margin-bottom: 2px
+		&:hover
+			a
+				background: url(../img/share_hover.jpg) no-repeat center
+			span
+				color: #333333
+.back-to-pictures
+	display: block
+	font-size: 12px
+	color: #484848
+	text-decoration: none
+	position: relative
+	margin-top: 18px
+	margin-left: 25px
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		width: 7px
+		height: 7px
+		border-right: 1px solid #484848
+		border-bottom: 1px solid #484848
+		left: -15px
+		top: 3px
+		transform: rotate(135deg)
+.picture
+	width: 650px
+	margin-left: 20px
+	margin-top: 2px
+	&__block
+		width: 650px
+		height: 420px
+		#viewport
+			display: table
+			position: relative
+			overflow: hidden
+			user-select: none
+			#slidewrapper
+				position: relative
+				width: calc(100% * 4)
+				top: 0
+				left: 0
+				padding: 0
+				transition: 1s
+				ul, li
+					margin: 0
+					padding: 0
+				li
+					width: calc(100% / 4)
+					list-style-type: none
+					display: inline
+					float: left
+				.slide
+					.slide-img
+						width: 100%
+			#prev-btn, #next-btn
+				position: absolute
+				width: 25px
+				height: 25px
+				background-color: rgba(0,0,0, .7)
+				border-radius: 50%
+				border: 1px solid #fff
+				top: 47%
+			#prev-btn:hover, #next-btn:hover
+				cursor: pointer
+			#prev-btn
+				left: 20px
+				display: flex
+				justify-content: center
+				align-items: center
+				span
+					display: block
+					width: 8px
+					height: 8px
+					border-bottom: 1.3px solid #fff
+					border-right: 1.3px solid #fff
+					transform: rotate(135deg) translate(-1.7px, -1.7px)
+			#next-btn
+				right: 20px
+				display: flex
+				justify-content: center
+				align-items: center
+				span
+					display: block
+					width: 8px
+					height: 8px
+					border-bottom: 1.3px solid #fff
+					border-right: 1.3px solid #fff
+					transform: rotate(-45deg) translate(-1.7px, -1.7px)
+			#nav-btns
+				position: absolute
+				width: 100%
+				bottom: 11px
+				padding: 0
+				margin: 0
+				text-align: center
+				display: flex
+				align-items: center
+				justify-content: center
+				letter-spacing: .6px
+				.slide-nav-btn
+					position: relative
+					display: flex
+					align-items: center
+					justify-content: center
+					list-style-type: none
+					width: 165px
+					height: 38px
+					color: #FFF9F9
+					font-size: 14px
+					background-color: rgba(0,0,0, .2)
+					margin: 6px
+				.slide-nav-btn:hover
+					cursor: pointer
+					background-color: rgba(0,0,0, .6)
+				.active
+					background-color: rgba(0,0,0, .6)
+
+@mixin sidebar__btn($back-color, $color)
+	display: block
+	background: $back-color
+	border-radius: 5px
+	text-decoration: none
+	color: $color
+	text-transform: uppercase
+.sidebar
+	padding: 0px 25px
+	margin-top: -6px
+	&__item-name
+		font-weight: 900
+		font-size: 36px
+	&__item-author
+		margin-top: -19px
+		font-weight: 300
+		font-size: 14px
+		color: #949494
+	&__item-params
+		margin-top: -1px
+		line-height: 17px
+		font-size: 12px
+		color: #484848
+	&__buy
+		display: flex
+		padding-top: 4px
+	&__download
+		display: flex
+		margin-top: -20px
+	&__collection
+		display: flex
+		padding: 50px 85px
+
+.buy
+	&_price
+		font-weight: 300
+		font-size: 35px
+		color: #000000
+		&_currency
+			font-size: 16px
+			margin-left: -4px
+	&_btn
+		@include sidebar__btn(#0951AF, #FFFFFF)
+		font-size: 14px
+		font-weight: bold
+		margin-left: 60px
+		margin-top: 35px
+		padding-left: 44px
+		padding-top: 13px
+		width: 178px
+		height: 27px
+	&_btn:hover
+		background: #4279C1
+	&_btn:active
+		background: #0951AF
+.download
+	&_params
+		font-size: 10px
+		color: #484848
+		line-height: 1.2
+	&_btn
+		@include sidebar__btn(#FFFFFF, #000000)
+		font-size: 14px
+		font-weight: bold
+		margin-left: 87px
+		margin-top: 1px
+		border: 1px solid #000000
+		padding-left: 51px
+		padding-top: 12px
+		width: 169px
+		height: 26px
+.collection
+	&_count
+		font-weight: 300
+		font-size: 11px
+		color: #828282
+		margin-top: 16px
+		white-space: nowrap
+		&_icon
+			padding-right: 6px
+			margin-top: 3px
+	&_btn
+		@include sidebar__btn(#FFFFFF, #000000)
+		font-size: 13px
+		font-weight: bold
+		margin-left: 27px
+		margin-top: 5px
+		border: 1px solid #000000
+		padding-left: 31px
+		padding-top: 13px
+		width: 189px
+		height: 25px
+		word-wrap: normal
